@@ -843,6 +843,38 @@
       line-height: 1.8;
     }
 
+    /* ─── PLAN LABELS ─── */
+    .plan-label {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 6px 18px;
+      border-radius: 999px 999px 0 0;
+      display: inline-block;
+      margin: 0 auto;
+      width: fit-content;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .plan-label--basic {
+      background: var(--gray-200);
+      color: var(--gray-700);
+      margin-top: 0;
+    }
+    .plan-label--full {
+      background: var(--primary);
+      color: var(--white);
+      margin-top: 20px;
+    }
+    .stack-card--basic {
+      border: 2px solid var(--gray-200);
+      margin-top: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
     /* ─── STICKY BOTTOM BAR ─── */
     .sticky-bar {
       position: fixed;
@@ -1314,7 +1346,48 @@
   <!-- ─── SEÇÃO 9: STACK DE VALOR ─── -->
   <section class="section">
     <div class="container">
-      <div class="stack-card">
+
+      <!-- ── CARD BÁSICO ── -->
+      <div class="plan-label plan-label--basic">BÁSICO</div>
+      <div class="stack-card stack-card--basic">
+        <h2>Comece agora por <span style="color:var(--accent)">R$ 10,00</span></h2>
+        <p style="text-align:center;font-size:15px;color:var(--gray-500);margin-bottom:24px;">Acesso imediato a 250 planos de aula prontos e editáveis:</p>
+
+        <ul class="stack-list">
+          <li>
+            <div class="stack-item-name">
+              <span class="check-icon" style="width:20px;height:20px;flex-shrink:0;"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>250 Planos de Aula Prontos e Editáveis</span>
+            </div>
+            <span class="stack-price-old">R$ 47,00</span>
+          </li>
+          <li>
+            <div class="stack-item-name">
+              <span class="check-icon" style="width:20px;height:20px;flex-shrink:0;"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Acesso imediato após a compra</span>
+            </div>
+          </li>
+          <li>
+            <div class="stack-item-name">
+              <span class="check-icon" style="width:20px;height:20px;flex-shrink:0;"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Garantia incondicional de 15 dias</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="price-box" style="margin-top:20px;">
+          <p class="today-label">Hoje por apenas:</p>
+          <p class="big-price">R$ 10,00</p>
+          <p class="price-detail" style="font-weight:600;color:var(--primary);margin-top:8px;">✓ Acesso imediato &nbsp;•&nbsp; ✓ Garantia de 15 dias</p>
+        </div>
+
+        <a href="#checkout" class="btn-cta" style="background:var(--gray-700);box-shadow:0 6px 20px rgba(51,65,85,0.25);" onclick="fbq('track','InitiateCheckout')">QUERO O PLANO BÁSICO →</a>
+        <p class="trust-line" style="margin-top:12px;">🔒 Ambiente seguro • Seus dados estão protegidos</p>
+      </div>
+
+      <!-- ── CARD COMPLETO ── -->
+      <div class="plan-label plan-label--full">⭐ MAIS POPULAR</div>
+      <div class="stack-card" style="margin-top:0;border:2px solid var(--primary);border-top-left-radius:0;border-top-right-radius:0;">
         <h2>Tudo isso por apenas <span style="color:var(--accent)">R$ 27,00</span></h2>
         <p style="text-align:center;font-size:15px;color:var(--gray-500);margin-bottom:24px;">Por menos que um rodízio, você nunca mais passa um domingo planejando do zero:</p>
 
@@ -1390,6 +1463,7 @@
         <a href="#checkout" class="btn-cta" onclick="fbq('track','InitiateCheckout')">SIM! QUERO O SEMANA PRONTA →</a>
         <p class="trust-line" style="margin-top:12px;">🔒 Ambiente seguro • Seus dados estão protegidos</p>
       </div>
+
     </div>
   </section>
 
